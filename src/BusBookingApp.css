@@ -1,0 +1,331 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+}
+
+/* Booking Container */
+.booking-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.city-select {
+  padding: 8px 12px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.go-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.go-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Available Buses Section */
+.available-buses {
+  margin-top: 30px;
+}
+
+.bus-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bus-table th {
+  background-color: #3498db;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.bus-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.bus-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.book-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #27ae60;
+}
+
+/* Seat Booking Section */
+.seat-booking {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chair-seats, .sleeper-seats {
+  margin-bottom: 30px;
+}
+
+.chair-seat-layout, .sleeper-seat-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.seat {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.seat.chair {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.seat.sleeper {
+  background-color: #bdc3c7;
+  color: #333;
+}
+
+.seat.selected {
+  background-color: #2ecc71;
+  color: white;
+  transform: scale(1.05);
+}
+
+.seat:hover:not(.selected) {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Bus Structure Layout */
+.chair-seat-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.chair-seat-layout::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #7f8c8d;
+}
+
+.sleeper-seat-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Price Details */
+.price-details {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.price-details h5 {
+  font-size: 18px;
+  color: #e74c3c;
+  margin-top: 10px;
+}
+
+.proceed-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.proceed-btn:hover {
+  background-color: #c0392b;
+}
+
+.proceed-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Payment Section */
+.payment-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.payment-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.pay-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.pay-btn:hover {
+  background-color: #27ae60;
+}
+
+.final-output {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px dashed #00b894;
+  border-radius: 12px;
+  background-color: #f0fff4;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 184, 148, 0.2);
+}
+
+.success-title {
+  color: #00b894;
+  margin-bottom: 5px;
+}
+
+.success-subtitle {
+  color: #636e72;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.ticket-details {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.ticket-details div {
+  margin: 8px 0;
+}
+
+.highlight {
+  color: #0984e3;
+  font-weight: bold;
+}
+
+.price {
+  color: #d63031;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.thank-msg {
+  color: #2d3436;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-container {
+    padding: 15px;
+  }
+  
+  .bus-table {
+    font-size: 14px;
+  }
+  
+  .seat {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+  
+  .chair-seat-layout, .sleeper-seat-layout {
+    gap: 8px;
+  }
+}
+
+/* Bus Structure Enhancements */
+.chair-seats h3::before, .sleeper-seats h3::before {
+  content: "🚌";
+  margin-right: 10px;
+}
+
+.chair-seat-layout {
+  position: relative;
+}
+
+.chair-seat-layout::after {
+  content: "Aisle";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  color: #7f8c8d;
+  font-weight: bold;
+  font-size: 18px;
+  opacity: 0.3;
+}
