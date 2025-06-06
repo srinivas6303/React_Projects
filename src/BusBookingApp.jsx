@@ -14,33 +14,40 @@ function AvailableBuses({ startCity, desCity }) {
     const [showSeats, setShowSeats] = useState(false);
 
     return (
-        <div className="available-buses">
-            <h2>Available Buses from {startCity} to {desCity}</h2>
-            <table className="bus-table" border="1" cellPadding="10" cellSpacing="0">
-                <thead>
-                    <tr>
-                        <th>Bus Name</th>
-                        <th>Departure</th>
-                        <th>Arrival</th>
-                        <th>Type</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {buses.map((bus) => (
-                        <tr key={bus.id}>
-                            <td>{bus.name}</td>
-                            <td>{bus.departure}</td>
-                            <td>{bus.arrival}</td>
-                            <td>{bus.type}</td>
-                            <td><button className="book-btn" onClick={() => setShowSeats(true)}>Book Now</button></td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            {showSeats && <SeatBooking startCity={startCity} desCity={desCity} />}
-        </div>
-    );
+  <div className="available-buses">
+    <h2>Available Buses from {startCity} to {desCity}</h2>
+    <div className="table-responsive">
+      <table className="bus-table" border="1" cellPadding="10" cellSpacing="0">
+        <thead>
+          <tr>
+            <th>Bus Name</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Type</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {buses.map((bus) => (
+            <tr key={bus.id}>
+              <td>{bus.name}</td>
+              <td>{bus.departure}</td>
+              <td>{bus.arrival}</td>
+              <td>{bus.type}</td>
+              <td>
+                <button className="book-btn" onClick={() => setShowSeats(true)}>
+                  Book Now
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    {showSeats && <SeatBooking startCity={startCity} desCity={desCity} />}
+  </div>
+);
+
 }
 
 function SeatBooking({ startCity, desCity }) {
@@ -242,6 +249,7 @@ function BusBookingApp() {
     const cities = ["Hyderabad", "Guntur", "Karimnagar", "Vizag", "Warangal"];
     const [startCity, setStartCity] = useState("");
     const [desCity, setdestCity] = useState("");
+    const [travelDate, setTravelDate] = useState("");   
     const [availableBuses, setAvailableBuses] = useState(false);
 
     function handleStart(e) {
@@ -252,11 +260,15 @@ function BusBookingApp() {
         setdestCity(e.target.value);
     }
 
+    function handleTravelDate(e) {    
+        setTravelDate(e.target.value);
+    }
+
     function handleBooking() {
-        if (startCity !== desCity) {
+        if (startCity !== desCity && travelDate) {
             setAvailableBuses(true);
         } else {
-            toast.warning("Start and Destination cannot be the same");
+            toast.warning("Start and Destination cannot be the same and travel date must be selected");
         }
     }
 
@@ -284,14 +296,21 @@ function BusBookingApp() {
             </select>
             <br />
 
-             <label htmlFor="travelDate">Travel Date: </label>
-            <input type="date" id="travelDate" name="travelDate" /> <br />
-
+            <label htmlFor="travelDate">Travel Date: </label>
+            <input 
+                type="date" 
+                id="travelDate" 
+                name="travelDate"
+                value={travelDate}          
+                onChange={handleTravelDate} 
+            /> 
+            <br />
 
             <button className="go-btn" onClick={handleBooking}>Go</button>
             {availableBuses && <AvailableBuses startCity={startCity} desCity={desCity} />}
         </div>
     );
 }
+
 
 export default BusBookingApp;

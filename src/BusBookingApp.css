@@ -286,6 +286,26 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 15px;
 }
 
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  width: 100%;
+}
+
+.bus-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* ensures table doesn't shrink too much */
+}
+
+.bus-table th,
+.bus-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
