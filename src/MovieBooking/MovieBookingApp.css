@@ -1,0 +1,365 @@
+
+.seat-button {
+  margin: 4px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  cursor: pointer;
+}
+.seat-button.selected {
+  background-color: green;
+  color: white;
+}
+.seat-button.booked {
+  background-color: red;
+  color: white;
+  cursor: not-allowed;
+}
+.screen {
+  text-align: center;
+  background-color: #444;
+  color: white;
+  padding: 8px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+.seat-category {
+  margin-bottom: 20px;
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.movie-booking-app {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.app-header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #ffffff;
+  background-color: #222;
+  color: #ffffff;
+  border-radius: 8px 8px 0 0;
+}
+
+.app-header h1{
+    color: white;
+}
+
+.booking-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 25px 0;
+  justify-content: center;
+}
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+}
+
+.select-container label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+input[type="password"],
+input[type="month"] {
+  padding: 8px 10px;
+  border: 1.8px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+select:focus,
+input[type="date"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="month"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.action-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.button-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 11px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.button-primary:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.button-primary:disabled {
+  background-color: #a1c4fd;
+  cursor: not-allowed;
+}
+
+/* Theaters table styling */
+.theaters-container {
+  margin-top: 20px;
+}
+
+.theaters-table-container {
+  overflow-x: auto;
+}
+
+.theaters-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.theaters-table th,
+.theaters-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 15px;
+}
+
+.theaters-table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: 700;
+}
+
+.showtime-button {
+  background-color: #17a2b8;
+  border: none;
+  padding: 7px 15px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.showtime-button:hover {
+  background-color: #138496;
+}
+
+/* Seats container */
+.seats-container {
+  margin-top: 25px;
+  padding: 20px;
+  border-top: 2px solid #eee;
+}
+
+.seat-category {
+  margin-bottom: 25px;
+}
+
+.seat-category h3 {
+  margin-bottom: 12px;
+  color: #222;
+  font-weight: 700;
+}
+
+.seat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.seat-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  border: 1.5px solid #888;
+  background-color: #fafafa;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+}
+
+.seat-button:hover:not(:disabled):not(.selected) {
+  background-color: #cce5ff;
+  border-color: #339af0;
+}
+
+.seat-button.selected {
+  background-color: #28a745;
+  border-color: #1e7e34;
+  color: white;
+}
+
+.seat-button.booked {
+  background-color: #dc3545;
+  border-color: #a71d2a;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Price details */
+.price-details {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #f1f3f5;
+  border-radius: 6px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+.price-details h2 {
+  margin-bottom: 15px;
+  color: #343a40;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.price-row.total {
+  font-weight: 700;
+  font-size: 18px;
+  color: #007bff;
+  border-bottom: none;
+}
+
+.selected-seats {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+/* Payment form */
+.payment-container {
+  margin-top: 30px;
+  padding: 25px;
+  border-top: 2px solid #ddd;
+  background-color: #fafafa;
+  border-radius: 6px;
+}
+
+.payment-container h1 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.payment-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Final output summary */
+.final-output {
+  margin-top: 35px;
+  background: #e9f7ef;
+  padding: 20px 25px;
+  border-radius: 8px;
+  border: 1.5px solid #28a745;
+  color: #155724;
+}
+
+.final-output h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.final-output p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.seat-summary ul {
+  margin: 8px 0 15px 20px;
+  list-style-type: disc;
+}
+
+.total-cost h3 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Toastify overrides for better visibility */
+.Toastify__toast--success {
+  background: #28a745;
+  color: white;
+  font-weight: 600;
+}
+
+.Toastify__toast--warning {
+  background: #ffc107;
+  color: #212529;
+  font-weight: 600;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .seat-row {
+    justify-content: center;
+  }
+  .theaters-table th,
+  .theaters-table td {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  .button-primary {
+    width: 100%;
+  }
+}

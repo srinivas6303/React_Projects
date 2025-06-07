@@ -1,0 +1,42 @@
+/* CounterApp.css */
+.counterdiv {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  font-size: 48px;
+  margin: 20px 0;
+  color: #007bff;
+}
+
+.ibtn, .dbtn, .rbtn {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ibtn {
+  background-color: #28a745;
+  color: white;
+}
+
+.dbtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.rbtn {
+  background-color: #ffc107;
+  color: black;
+}

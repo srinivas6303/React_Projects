@@ -1,0 +1,61 @@
+.navigator-container {
+  text-align: center;
+  padding: 30px;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2d2d2d;
+}
+
+.button-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.app-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 180px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+}
+
+.app-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.app-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.app-card button:hover {
+  background-color: #0056b3;
+}
+
+.app-output {
+  padding: 20px;
+}

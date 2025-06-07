@@ -1,9 +1,9 @@
-import BusBookingApp from "./BusBookingApp";
+import NavigatorApp from "./NavigatorApp";
 
 function App() {
   return (
     <div className="App">
-     <BusBookingApp/>
+     <NavigatorApp/>
     </div>
   );
 }
