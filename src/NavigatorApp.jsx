@@ -4,23 +4,27 @@ import MovieBookingApp from './MovieBooking/MovieBookingApp';
 import CounterApp from './Counter/CounterApp';
 import ToDoListApp from './Todolist/ToDoListApp';
 import './NavigatorApp.css';
+import Store from './Store/Store';
 
 function NavigatorApp() {
   const [busApp, setBusApp] = useState(false);
   const [movieApp, setMovieApp] = useState(false);
   const [counterApp, setCounterApp] = useState(false);
   const [todolistApp, setToDoListApp] = useState(false);
+  const [store, setStore] = useState(false);
 
   function handleApp(app) {
     setBusApp(false);
     setMovieApp(false);
     setCounterApp(false);
     setToDoListApp(false);
+    setStore(false)
 
     if (app === "bus") setBusApp(true);
     else if (app === "movie") setMovieApp(true);
     else if (app === "counter") setCounterApp(true);
     else if (app === "todo") setToDoListApp(true);
+    else if (app === "store") setStore(true);
   }
 
   return (
@@ -44,6 +48,10 @@ function NavigatorApp() {
           <img src="https://images.pexels.com/photos/5662857/pexels-photo-5662857.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Movie Booking" />
           <button>Movie Booking 🎬</button>
         </div>
+        <div className="app-card" onClick={() => handleApp("store")}>
+          <img src="https://images.pexels.com/photos/64613/pexels-photo-64613.jpeg" alt="Store" />
+          <button>Store🛒</button>
+        </div>
       </div>
 
       <div className="app-output">
@@ -51,6 +59,7 @@ function NavigatorApp() {
         {todolistApp && <ToDoListApp />}
         {busApp && <BusBookingApp />}
         {movieApp && <MovieBookingApp />}
+        {store && <Store />}
       </div>
     </div>
   );
