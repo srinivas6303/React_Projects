@@ -6,23 +6,18 @@ This repository contains multiple mini-projects built using **React.js**. These 
 
 ### 🚍 BusBooking
 A simple bus seat booking interface.
-> **Added:** Last month
 
 ### 🔢 Counter  
 A basic counter app with increment and decrement functionality.  
-> **Added:** Last month
 
 ### 🎬 MovieBooking  
 Allows users to book movie tickets and view details.  
-> **Added:** Last month
 
 ### 🛒 Store  
 A minimal product listing and cart management application.  
-> **Added:** 2 weeks ago
 
 ### ✅ Todolist  
 A to-do list app to manage daily tasks.  
-> **Added:** 2 weeks ago
 
 ---
 
