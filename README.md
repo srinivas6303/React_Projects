@@ -28,4 +28,5 @@ These hands-on projects helped me become **proficient in fundamental concepts of
 - Conditional rendering  
 - React hooks (useState, useEffect)  
 
-
+## Resource
+Link: https://docs.google.com/document/d/1enjMoXifglrsgUof-xC_QYk2KIEhimQAUBrdnTq_-Pc/edit?usp=sharing
